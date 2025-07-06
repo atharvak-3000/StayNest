@@ -1,0 +1,103 @@
+<% layout("layouts/boilerplate") %>
+
+    <body>
+        <!-- <h3>All Listings</h3> -->
+        <!-- <form action="/listings/new" method="get">
+        <button>Create New Listing !</button>
+    </form> -->
+        <style>
+            #filters{
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .filter{
+                text-align:center;
+                margin:1rem;
+                opacity: 0.5;
+            }
+            .filter:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+        </style>
+
+        <div id="filters">
+            <div class="filter">
+                <i class="fa-solid fa-fire-flame-curved"></i><br>
+                Trending
+            </div>
+            <div class="filter">
+                <i class="fa-solid fa-bed"></i><br>
+                Rooms
+            </div>
+            <div class="filter">
+                <i class="fa-solid fa-mountain-city"></i><br>
+                Mountains
+            </div>
+            
+            <div class="filter">
+                <i class="fa-solid fa-umbrella-beach"></i><br>
+                Beach
+            </div>
+            <div class="filter">
+                <i class="fa-solid fa-cow"></i><br>
+                Farms
+            </div>
+             <div class="filter">
+        <i class="fa-solid fa-tree"></i><br>
+        Nature
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-person-hiking"></i><br>
+        Hiking
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-champagne-glasses"></i><br>
+        Parties
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-water"></i><br>
+        Lakeside
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-campground"></i><br>
+        Camping
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-snowflake"></i><br>
+        Snow
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-building"></i><br>
+        Apartments
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-ship"></i><br>
+        Boats
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-wine-bottle"></i><br>
+        Vineyards
+    </div>
+            
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+            <% for (let listing of allListings){ %>
+                <a href="/listings/<%= listing._id%>" class="listing-link">
+                    <div class="card listing-card">
+                        <img src="<%= listing.image.url  %>" class="card-img-top" alt="listing_image"
+                            style="height: 20rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b> <br>
+                                &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </body>
