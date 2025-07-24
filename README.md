@@ -27,14 +27,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Home Page | Listing Page | Review Form |
-|-----------|--------------|-------------|
-| _Add your screenshots here_ |
-
----
-
 ## 🧰 Tech Stack
 
 **Frontend:**
@@ -60,5 +52,5 @@
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/yourusername/staynest.git
+git clone https://github.com/atharvak-3000/staynest.git
 cd staynest
